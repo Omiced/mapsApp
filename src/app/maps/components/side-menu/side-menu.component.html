@@ -1,1 +1,11 @@
-<p>side-menu works!</p>
+<ul class="list-group">
+  @for(menuItem of menuItems; track menuItem.name){
+  <li
+    [routerLink]="[menuItem.route]"
+    routerLinkActive="active"
+    class="list-group-item"
+  >
+    {{ menuItem.name }}
+  </li>
+  }
+</ul>
